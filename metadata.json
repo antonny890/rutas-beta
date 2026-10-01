@@ -1,0 +1,6 @@
+{
+  "name": "ENRUTA - Tu Ruta, Tu Costo Justo",
+  "description": "Sistema de transporte público urbano y cálculo inteligente de tarifas para la ciudad de Arequipa (SRS v2). Módulos de Pasajero, Conductor y Administración.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

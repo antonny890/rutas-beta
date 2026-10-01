@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="50%" stop-color="#0369A1" />
+      <stop offset="100%" stop-color="#0F3874" />
+    </linearGradient>
+
+    <linearGradient id="greenCurve" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="50%" stop-color="#16A34A" />
+      <stop offset="100%" stop-color="#15803D" />
+    </linearGradient>
+
+    <linearGradient id="orangeAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#F97316" />
+    </linearGradient>
+
+    <linearGradient id="busBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+
+    <linearGradient id="busGreenStripe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#15803D" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Circular Outer Emblem Flow -->
+  <g id="emblem-group" transform="translate(250, 200)">
+    <!-- Orange accent patch (left warm glow) -->
+    <path d="M -150,0 C -150,-50 -120,-90 -80,-120 C -70,-80 -90, -10 -70,20 C -110,15 -140,5 -150,0 Z" fill="url(#orangeAccent)" />
+
+    <!-- Top Green Sweep Track -->
+    <path d="M -90,-120 C -30,-175 60,-175 120,-120 C 145,-98 160,-65 160,-30 C 135,-30 115,-50 95,-75 C 60,-115 -10,-125 -65,-95 Z" fill="url(#greenCurve)" filter="url(#softShadow)" />
+
+    <!-- Blue Outer Enclosure Loop -->
+    <path d="M 120,-120 C 165,-60 170,30 130,100 C 90,165 0,180 -70,160 C -125,145 -165,95 -165,40 C -165,-10 -150,-40 -140,-60 C -130,-45 -125,-10 -120,20 C -105,90 -40,140 30,140 C 90,140 140,90 140,30 C 140,-25 105,-75 70,-100 Z" fill="#0284C7" />
+
+    <!-- Main Dynamic Winding Road -->
+    <path d="M -130,85 C -90,160 50,170 110,110 C 135,85 140,40 120,0 C 90,-50 20,-30 -30,-10 C -70,10 -100,5 -95,-30 C -90,-65 -50,-80 0,-70 C -40,-85 -105,-60 -115,-15 C -125,30 -80,45 -30,35 C 30,25 90,45 80,85 C 70,125 -30,145 -85,115 C -110,100 -125,90 -130,85 Z" fill="url(#roadGrad)" filter="url(#softShadow)" />
+
+    <!-- Center Road White Dashes -->
+    <path d="M -100,102 Q -85,112 -65,115" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9" />
+    <path d="M -40,115 Q -10,115 15,105" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.9" />
+    <path d="M 38,95 Q 60,80 65,60" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.9" />
+    <path d="M 55,40 Q 35,28 0,26" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.9" />
+    <path d="M -25,25 Q -55,20 -65,5" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9" />
+    <path d="M -70,-12 Q -65,-35 -35,-42" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9" />
+
+    <!-- Map Pin on Road (Lower Left) -->
+    <g transform="translate(-105, 55)">
+      <path d="M 0,0 C -12,0 -20,-8 -20,-20 C -20,-32 0,-50 0,-50 C 0,-50 20,-32 20,-20 C 20,-8 12,0 0,0 Z" fill="#0284C7" />
+      <circle cx="0" cy="-20" r="7" fill="#FFFFFF" />
+    </g>
+
+    <!-- Upward Green Arrow at top right -->
+    <g transform="translate(115, -145) rotate(42)">
+      <polygon points="0,-24 16,10 5,6 5,28 -5,28 -5,6 -16,10" fill="#22C55E" />
+    </g>
+
+    <!-- Coin / Fare Badge (Sol / Currency) with warm orange ring -->
+    <g transform="translate(100, -95)">
+      <circle cx="0" cy="0" r="26" fill="url(#orangeAccent)" filter="url(#softShadow)" />
+      <circle cx="0" cy="0" r="21" fill="#F59E0B" stroke="#FDE68A" stroke-width="2" />
+      <text x="0" y="8" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle">S/</text>
+    </g>
+
+    <!-- Transit Bus Emblem Front Silhouette (Right blue badge) -->
+    <g transform="translate(108, -30)">
+      <circle cx="0" cy="0" r="26" fill="#0284C7" filter="url(#softShadow)" />
+      <!-- Bus Mini Front SVG -->
+      <g transform="translate(-14, -14) scale(0.9)" fill="#FFFFFF">
+        <rect x="3" y="2" width="22" height="23" rx="4" />
+        <rect x="5" y="5" width="18" height="9" rx="2" fill="#0284C7" />
+        <circle cx="7" cy="18" r="2" fill="#0284C7" />
+        <circle cx="21" cy="18" r="2" fill="#0284C7" />
+        <rect x="11" y="17" width="6" height="2" rx="1" fill="#0284C7" />
+        <rect x="5" y="25" width="4" height="4" rx="1" />
+        <rect x="19" y="25" width="4" height="4" rx="1" />
+      </g>
+    </g>
+
+    <!-- Dynamic 3D Bus Driving on the top green curve -->
+    <g transform="translate(-30, -140) rotate(-16)">
+      <!-- Shadow under bus -->
+      <ellipse cx="20" cy="38" rx="60" ry="8" fill="#000000" opacity="0.25" />
+      
+      <!-- Bus Main Body -->
+      <path d="M -45,10 C -45,-15 -25,-25 10,-25 L 65,-25 C 80,-25 90,-10 90,15 L 85,25 C 85,32 75,34 65,34 L -35,34 C -45,34 -45,25 -45,10 Z" fill="url(#busBodyGrad)" stroke="#CBD5E1" stroke-width="1.5" />
+      
+      <!-- Green side swoosh/stripe -->
+      <path d="M -44,12 L 85,24 L 85,29 L -44,24 Z" fill="url(#busGreenStripe)" />
+      <path d="M -45,4 L -20,-18 L 30,-18 L 10,4 Z" fill="#22C55E" opacity="0.9" />
+
+      <!-- Windshield & Side Windows -->
+      <!-- Front Windshield -->
+      <path d="M 50,-20 L 78,-20 C 84,-20 86,-12 85,2 L 52,2 Z" fill="#0284C7" opacity="0.9" />
+      <!-- Driver window -->
+      <polygon points="26,-18 46,-18 46,2 26,2" fill="#0284C7" opacity="0.9" />
+      <!-- Passenger windows -->
+      <polygon points="2,-18 22,-18 22,2 2,2" fill="#0284C7" opacity="0.85" />
+      <polygon points="-22,-18 -2,-18 -2,2 -22,2" fill="#0284C7" opacity="0.85" />
+      <polygon points="-40,-12 -26,-18 -26,2 -40,2" fill="#0284C7" opacity="0.85" />
+
+      <!-- Headlights -->
+      <circle cx="87" cy="18" r="3.5" fill="#FEF08A" />
+      
+      <!-- Wheels -->
+      <g transform="translate(-20, 32)">
+        <circle cx="0" cy="0" r="10" fill="#1E293B" />
+        <circle cx="0" cy="0" r="5" fill="#94A3B8" />
+      </g>
+      <g transform="translate(58, 32)">
+        <circle cx="0" cy="0" r="10" fill="#1E293B" />
+        <circle cx="0" cy="0" r="5" fill="#94A3B8" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Typography: enruta & Slogan -->
+  <g transform="translate(250, 420)">
+    <!-- Brand Title -->
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="64" font-weight="900" fill="#0F2B5C" letter-spacing="-1.5" text-anchor="middle">
+      enruta
+    </text>
+    <!-- Slogan -->
+    <text x="0" y="38" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="600" fill="#1E293B" letter-spacing="0.5" text-anchor="middle">
+      Tu Ruta, Tu Costo Justo
+    </text>
+    <!-- Arequipa Subtag -->
+    <text x="0" y="60" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="700" fill="#059669" letter-spacing="3" text-anchor="middle">
+      SISTEMA INTEGRADO DE TRANSPORTE · AREQUIPA
+    </text>
+  </g>
+</svg>
